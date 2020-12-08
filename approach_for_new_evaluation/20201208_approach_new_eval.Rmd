@@ -14,9 +14,10 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Vorgehen
 Die folgenden Schritte sind massgebend
 
-* Entwicklung
-* Produktion mit angenommenem Einführung für Routine YYMM (z.Bsp 2104)
+* Primäre Entwicklung
 * Testlauf
+* Produktion mit angenommenem Einführung für Routine YYMM (z.Bsp 2104)
+* Weiterentwicklung
 
 
 ## Primäre Entwicklung
@@ -30,7 +31,7 @@ Die folgenden Schritte sind massgebend
 
 
 ## Testlauf
-* Separate Umgegung unter data_projekte/testlauf
+* Separate Umgegung unter data_projekte/Testlauf
 * Entwickelte Sourcen werden vom Branch YYMM ge-pulled und hier mit gesamter ZWS getestet. 
 * Falls Test ok ist, dann wird Branch YYMM auf Branch master gemerged und eine Kopie vom Branch master wird in data_zws verschoben.
 
@@ -44,7 +45,7 @@ Die folgenden Schritte sind massgebend
 
 
 ## Weiterentwicklung
-* Unter `data_projekte/projekte/<Projekt_Name>` oder unter data_projekte/testlauf zuerst auf den branch master aktualisieren und einen neuen Branch YYMM+4 erstellen. 
+* Unter data_projekte/Testlauf zuerst auf den branch master aktualisieren und einen neuen Branch YYMM+4 erstellen. 
 * Entwicklungen im neuen Branch YYMM+4
 * Sobald Tests ok und vor neuer Auswertung mergen von Branch YYMM+4 auf Branch master
 * Pull vom branch master in data_zws
