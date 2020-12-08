@@ -1,9 +1,9 @@
 {
-    "path" : "~/Data/Projects/Github/pvrqualitasag/softengprinciple/use_case_change_data_zws",
-    "sortOrder" : [
+    "path": "~/Data/Projects/Github/pvrqualitasag/softengprinciple",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }
