@@ -1,0 +1,43 @@
+---
+title: "Software Engineering Principles"
+---
+
+When software programs are developed by a group of people over a longer period of time, certain organisational rules and guidelines can help to avoid frustrating experiences. The field that investigates such questions is called `software engineering`. Because it is important to make a difference between programming, software development and software engineering, the next section defines a few terms that seam to be useful in this context.
+
+
+# Terminology
+
+* __Programming__: 
+* __Software Development__:
+* __Software Engineering__:
+
+
+# Rules
+The twelve points that are mentioned in a post by Joel Spolsky are
+
+1.
+2.
+3.
+4.
+5.
+6.
+7. 
+8.
+9.
+10.
+11.
+12.
+
+
+# Procedures
+Bug fixes and new features of a program are brought to the user in new releases. These releases can happen at fixed time points or fixed intervals. But it is important that it happens as a defined procedure and that releases are announced and documented. The production of releases is supported by the versioning system and in particular by the branching functionality of the versioning system. Releases can be produced in either of two ways. 
+
+1. The released version is always on the master. Every new development or every bug fix is first implemented and tested in a separate branch. After the tests were successful, the branch is merged onto the master and subsequently the master is used as the source for the new release.
+2. For every release a new branch is created. Then tests and bugfixes are done on the release-specific branch which is used as the source for the release. After the release, the changes must be merged onto the branch.
+
+
+<!-- Hello, Website! -->
+
+<!-- For more information about simple R Markdown websites, please read the documentation at https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html. -->
+
+<!-- Please also note that simple R Markdown sites are _not_ based on **blogdown**. They are probably good for websites with only a few Rmd documents. For larger-scale and more sophisticated websites (such as blogs), you may want to use **blogdown** instead: https://github.com/rstudio/blogdown. -->

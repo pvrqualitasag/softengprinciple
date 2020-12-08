@@ -1,0 +1,3 @@
+"0","knitr::opts_chunk$set(echo = TRUE)"
+"0","# rmdhelp::show_knit_hook_call()"
+"0","knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)"

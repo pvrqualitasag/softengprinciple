@@ -1,0 +1,27 @@
+---
+title: "Überarbeitung einer Auswertung"
+author: "Peter von Rohr"
+date: "12/8/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Disclaimer
+
+
+## Vorgehen
+
+### Entwicklung
+* Neues R-Studio-projekt ausgehen von XCode
+* Entwicklung unter data_projekte/projekte/<Projekt_Name>
+
+
+### Produktion
+* Sobald die ZO ok gibt, dann Verschiebung nach data_zws
+
+
+### Testlauf
+* Separate Umgegung unter data_projekte/testlauf
