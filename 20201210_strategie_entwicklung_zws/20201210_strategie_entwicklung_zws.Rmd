@@ -1,0 +1,16 @@
+---
+title: "Strategien zur Entwicklung von neuen Auswertungen"
+author: "Peter von Rohr"
+date: "12/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Zusammenfassung
+
+
+## Ausgangslage
+Die produktiven Versionen der Auswertungen für die Zuchtwertschätzungen (ZWS) sind unter /qualstorzws01/data_zws abgelegt. Für die Milchvieh-ZWS gibt es für jede Merkmalsgruppe ein separates Unterverzeichnis. Die ZWS für VMS befinden sich alle unter /qualstorzws01/data_zws/vms. 
