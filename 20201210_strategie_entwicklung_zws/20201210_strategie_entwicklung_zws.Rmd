@@ -7,10 +7,42 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+# rmdhelp::show_knit_hook_call()
+knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
 ```
 
-## Zusammenfassung
+# Zusammenfassung
 
 
-## Ausgangslage
-Die produktiven Versionen der Auswertungen für die Zuchtwertschätzungen (ZWS) sind unter /qualstorzws01/data_zws abgelegt. Für die Milchvieh-ZWS gibt es für jede Merkmalsgruppe ein separates Unterverzeichnis. Die ZWS für VMS befinden sich alle unter /qualstorzws01/data_zws/vms. 
+# Ausgangslage
+Die produktiven Versionen der Programme (inklusive Inputs) der Auswertungen für die Zuchtwertschätzungen (ZWS) sind unter /qualstorzws01/data_zws abgelegt. Für die Milchvieh-ZWS gibt es für jede Merkmalsgruppe ein separates Unterverzeichnis. Die ZWS für die Fleischmerkmale für VMS befinden sich alle unter /qualstorzws01/data_zws/vms. Für die Kleinwiederkäuer (KWK) befinden sich die ZWS unter /qualstorzws01/data_zws/{milchschafe,ziegen}. Die ZWS für Jersey ist unter /qualstorzws01/data_zws/jersey zu finden. 
+
+Die Unterverzeichnisse der Auswertungen sind mit Git versioniert. Das heisst in jedem Unterverzeichnis von /qualstorzws01/data_zws befindet sich unter .git ein lokales Repository der versionierten Daten. Am Beispiel der Auswertung für FBK ist das lokale Git-Repository in /qualstorzws01/data_zws/fbk/.git zu finden.
+
+```{r zws-ausgangslage, echo=FALSE, hook_convert_odg=TRUE, fig_path="odg"}
+#rmdhelp::use_odg_graphic(ps_path = 'odg/zws-ausgangslage.odg')
+knitr::include_graphics(path = "odg/zws-ausgangslage.png")
+```
+
+Eine wichtige Eigenschaft der Programm für die produktive Auswertung ist, dass sie vor deren Einsatz in einer Routine-Auswertung getestet sind und dass sie in einer definierten Version vorliegen. Allfällige Änderungen oder Weiterentwicklungen müssen vor deren Einführung zuerst getestet werden. Nach einem erfolgreichen Test können die getesteten Änderungen in die produktive Auswertungen installiert werden. Zeitlich sollte dies vor einer Routine-Auswertung passieren. Mögliche Strategien, wie Anpassungen oder Weiterentwicklungen organisiert werden können wird in den nachfolgenden Abschnitten beschrieben. 
+
+
+# Entwicklungsstrategien
+Bei der Einführung der Versionierung mit Git wurde eine einfache Strategie für die Entwicklung neuer Auswertungen dargelegt. Diese Strategie funktioniert mit der Entwicklung und dem Testen unter '/qualstorzws01/data_projekte/projekte' und der Installation der getesteten Programme unter '/qualstorzws01/data_zws'. Diese einfache Variante einer Entwicklungsstrategie wird im Unterabschnitt 'Einfache Entwicklungsstrategie' beschrieben. 
+
+Unter gewissen Umständen kann es vorteilhaft sein, für die entwickelten Programme noch ein Git-Repository unter GitHub zu betreiben. Ein möglicher Vorteil ist, dass R-packages sehr einfach von GitHub installiert werden können. Die um GitHub erweiterte Entwicklungsstrategie ist im Unterabschnitt 'Erweiterte Entwicklungsstrategie' beschrieben.
+
+
+## Einfache Entwicklungsstrategie
+In der einfachen Entwicklungsstrategie werden Entwicklungen, Tests und Produktion in zwei oder drei Verzeichnisse aufgeteilt. Diese Aufteilung mit zwei Unterverzeichnissen, wobei Entwicklung und Testen in einem von der Produktion abgetrennten Unterverzeichnis angelegt sind, ist in der folgenden Darstellung gezeigt. 
+
+```{r simple-dev-strat, echo=FALSE, hook_convert_odg=TRUE, fig_path="odg"}
+#rmdhelp::use_odg_graphic(ps_path = 'odg/simple-dev-strat.odg')
+knitr::include_graphics(path = "odg/simple-dev-strat.png")
+```
+
+In gewissen Auswertungen werden die Tests von der Entwicklung abgetrennt. 
+ 
+ 
+## Erweiterte Entwicklungsstrategie
+  
